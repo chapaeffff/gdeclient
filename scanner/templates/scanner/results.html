@@ -1,0 +1,13 @@
+{% extends 'scanner/base.html' %}
+
+{% block content %}
+
+		{% for result in results%}
+			<p>
+                <a href = 'https://vk.com/id{{result.post_owner.user_id}}'>{{result.post_owner.first_name}} </a>
+                {{result.text|truncatechars:200}}
+                <a href = 'https://vk.com/wall{{result.post_owner.user_id}}_{{result.post_id}}' target = '_blank'>перейти к посту вк</a>
+
+		    </p>
+		{% endfor %}
+{% endblock %}
