@@ -24,7 +24,7 @@ def index(request):
 
 def search(request, city_id):
     for search_line in search_lines:
-        searches = vk_api.newsfeed.search(q=search_line, v=v, count=500, start_from = 0)['items']
+        searches = vk_api.newsfeed.search(q=search_line, v=v, count=200, start_from = 0)['items']
         sleep(0.33)
         requests = 0
         for i in range(100):
