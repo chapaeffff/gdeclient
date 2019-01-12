@@ -25,7 +25,7 @@ SECRET_KEY = 'q*x+0e96@j%o9xa0&z(n%(-bu%296l)x=o$7kukg59n69dp#nl'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'cinemago.pythonanywhere.com']
 
 
 # Application definition
