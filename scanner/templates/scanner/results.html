@@ -4,9 +4,11 @@
 
 		{% for result in results%}
 			<p>
-                <a href = 'https://vk.com/id{{result.post_owner.user_id}}'>{{result.post_owner.first_name}} </a>
+				<i>{{result.search}}</i>: <a href = 'https://vk.com/id{{result.post_owner.user_id}}'>{{result.post_owner.first_name}} </a>
                 {{result.text|truncatechars:200}}
                 <a href = 'https://vk.com/wall{{result.post_owner.user_id}}_{{result.post_id}}' target = '_blank'>перейти к посту вк</a>
+
+				<a href = /admin/scanner/post/{{result.id}}/change/ tartget = _blank>редактировать запись </a>
 
 		    </p>
 		{% endfor %}
